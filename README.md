@@ -53,7 +53,35 @@ Dieses Projekt enthält einen logging-fähigen Browser zur Untersuchung des Info
 
 - **Beim Schließen des Browsers** wird der Keylogger automatisch beendet.
 
-- **Es werden keine persönlichen Daten gespeichert.**
+📄 Verhalten & Hinweise
+Alle Tastatureingaben werden lokal in logs/keylog.jsonl gespeichert
+
+Die Eingaben können nach der Sitzung überprüft, bearbeitet oder gelöscht werden
+
+Die Daten werden erst nach Bestätigung durch die Nutzer*innen an den Server übertragen
+
+Kein Logging von persönlichen Daten (keine Namen, keine IP-Adressen)
+
+Die Prozesse von Keylogger und Browser beenden sich automatisch beim Schließen des Fensters
+
+Beim Starten des Scripts wird automatisch die Benutzer-ID ausgelesen
+
+🧪 Projektstruktur
+  ```bash
+ Masterarbeit_Stud_Macrdy/
+├── Electron-browser/
+│   ├── index.js             # Electron Main-Prozess
+│   ├── preload.js           # Context Bridge zur sicheren Kommunikation
+│   ├── render.js            # Renderer (Frontend + Logging)
+│   ├── keylogger.py         # Python-Keylogger (global)
+│   ├── start_all.sh         # Startskript für macOS
+│   ├── setup_mac.sh         # Setupskript für macOS
+│   ├── requirements.txt     # Python-Abhängigkeiten
+│   ├── logs/                # Gespeicherte Tastatur-Logs (JSONL)
+│   ├── templates/
+│   │   └── log-review.html  # Ansicht zur Log-Prüfung und Freigabe
+│   └── ...
+  ```
 
 ❓ Häufige Probleme  
 
