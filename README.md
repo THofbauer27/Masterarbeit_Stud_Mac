@@ -37,6 +37,7 @@ Dieses Projekt enthält einen logging-fähigen Browser zur Untersuchung des Info
   
 
 🚀 Nutzung  
+
 - **Starte den Browser mit Keylogger:**
 
   Im Terminal:
@@ -49,11 +50,17 @@ Dieses Projekt enthält einen logging-fähigen Browser zur Untersuchung des Info
 🔒 Die Tastatur- und Mauseingaben werden lokal gespeichert und am Ende der Sitzung zur Überprüfung angezeigt. Erst nach manueller Bestätigung werden die Daten anonym an den zentralen Server übertragen.
 
 📄 Hinweise  
+
 - **Fenster für Keylogger und Prozesse werden automatisch minimiert.**
 
 - **Beim Schließen des Browsers** wird der Keylogger automatisch beendet.
 
+
+
+
 📄 Verhalten & Hinweise
+
+
 Alle Tastatureingaben werden lokal in logs/keylog.jsonl gespeichert
 
 Die Eingaben können nach der Sitzung überprüft, bearbeitet oder gelöscht werden
