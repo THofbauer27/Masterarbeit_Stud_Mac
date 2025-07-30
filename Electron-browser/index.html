@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Browser</title>
+  <link href="styles/tailwind.min.css" rel="stylesheet">
+  <style>
+    .tab {
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 6px 12px;
+      margin-right: 2px;
+      background-color: #f3f3f3;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      border-radius: 6px 6px 0 0;
+      cursor: pointer;
+      transition: background-color 0.2s, box-shadow 0.2s;
+    }
+    .tab:hover {
+      background-color: #e0e0e0;
+    }
+    .tab.active-tab {
+      background-color: #ffffff;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+      font-weight: 500;
+    }
+    .tab span.ml-1 {
+      display: none;
+    }
+    .tab:hover span.ml-1 {
+      display: inline;
+    }
+    .nav-btn {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 50%;
+      background-color: #f3f3f3;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+      color: #333;
+    }
+    .nav-btn:hover {
+      background-color: #e0e0e0;
+      transform: translateY(-1px);
+    }
+    .nav-btn:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+    webview {
+      transition: opacity 0.2s ease-in-out;
+    }
+  </style>
+</head>
+<body class="m-0 p-0 flex flex-col h-screen overflow-hidden">
+  <div id="tabBar" class="flex bg-gray-200 p-1 overflow-x-auto">
+    <div id="newTab" class="py-2 px-4 cursor-pointer">+</div>
+  </div>
+
+  <div id="navContainer" class="flex space-x-2 p-2 bg-white border-b">
+    <button id="backBtn" class="nav-btn" title="Zurück">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button id="forwardBtn" class="nav-btn" title="Vor">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 6 15 12 9 18"></polyline>
+      </svg>
+    </button>
+
+    <label class="flex items-center space-x-2">
+      <input type="checkbox" id="popupToggle" class="form-checkbox">
+      <span id="popupLabel">Popups on</span>
+    </label>
+
+    <input id="urlBar" type="text" placeholder="Enter URL and press Enter" class="flex-1 p-2 border rounded">
+  </div>
+
+  <div id="webviewsContainer" class="relative min-h-0 flex-1 w-full overflow-hidden"></div>
+
+  <script src="config.js"></script>
+  <script src="render.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

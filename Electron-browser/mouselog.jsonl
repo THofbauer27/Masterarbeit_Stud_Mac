@@ -1,0 +1,4 @@
+{"user_id": "Mac_Stud001", "timestamp": "2025-07-18T06:22:07.893550Z", "event": "click", "x": 369.01953125, "y": 255.453125, "button": "Button.left", "url": "https://www.google.com/"}
+{"user_id": "Mac_Stud001", "timestamp": "2025-07-18T06:22:07.999832Z", "event": "release", "x": 369.01953125, "y": 255.453125, "button": "Button.left", "url": "https://www.google.com/"}
+{"user_id": "Mac_Stud001", "timestamp": "2025-07-18T06:22:10.888180Z", "event": "click", "x": 273.62109375, "y": 159.1015625, "button": "Button.left", "url": "https://www.google.com/"}
+{"user_id": "Mac_Stud001", "timestamp": "2025-07-18T06:22:11.019780Z", "event": "release", "x": 273.62109375, "y": 159.1015625, "button": "Button.left", "url": "https://www.google.com/"}
