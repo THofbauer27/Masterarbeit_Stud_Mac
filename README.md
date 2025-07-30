@@ -34,7 +34,7 @@ Dieses Projekt enthält einen logging-fähigen Browser zur Untersuchung des Info
      → über `npm install`
    - Alle pip-Abhängigkeiten (für den Keylogger)  
      → über `pip3 install pynput pyobjc`
-   - Optional: ein virtuelles Python-Environment
+  
 
 🚀 Nutzung  
 - **Starte den Browser mit Keylogger:**
