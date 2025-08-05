@@ -11,7 +11,7 @@ fi
 
 echo "🐍 Starte Python-Keylogger im Hintergrund (Logs: keylogger.log)..."
 $PYTHON_PATH keylogger.py > keylogger.log 2>&1 &
-KEYLOGGER_PID=$!
+KEYLOGGER_PID=$1
 echo "✅ Keylogger PID: $KEYLOGGER_PID"
 
 echo "⚡ Starte Electron-App..."
